@@ -8,8 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link rel="icon" href="./images/weather.png" />
     <link rel="stylesheet" href="./dist/output.css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -29,143 +28,133 @@
       </header>
       <div class="boxes-container bg-cover bg-center pt-5 max-h-[350px] px-5">
         <div
-          class="container mx-auto bg-[#1E202B] rounded-full py-2 flex justify-between px-2"
-        >
+          class="container mx-auto bg-[#1E202B] rounded-full py-2 flex justify-between px-2 max-w-[840px]">
           <input
             class="rounded-full bg-inherit w-full outline-none px-3 caret-white text-white"
             type="text"
             name="location"
-            id="location"
-            placeholder="Insert the location..."
-          />
+            id="location-search"
+            placeholder="Insert the location..." />
           <button
-            class="text-white bg-[#3D3A4E] rounded-full px-4 py-2 relative before:w-full before:h-full before:absolute before:bg-[#06A5DA] before:rounded-full before:top-0 before:right-full overflow-hidden transition-all z-10 before:-z-10 before:bg-opacity-100 before:duration-300 before:transition-all  hover:before:right-0"
-          >
+            id="btn"
+            class="text-white bg-[#3D3A4E] rounded-full px-4 py-2 relative before:w-full before:h-full before:absolute before:bg-[#06A5DA] before:rounded-full before:top-0 before:right-full overflow-hidden transition-all z-10 before:-z-10 before:bg-opacity-100 before:duration-300 before:transition-all hover:before:right-0">
             search
           </button>
         </div>
         <div
-          class="boxes space-y-4 md:space-y-0 container mx-auto mt-9 md:flex flex-wrap gap-4 md:gap-0 md:flex-nowrap translate-y-[1%]"
-        >
+          class="boxes space-y-4 md:space-y-0 container mx-auto mt-9 md:flex flex-wrap gap-4 md:gap-0 md:flex-nowrap translate-y-[1%] max-w-[840px]">
           <div class="box bg-[#3D3A4E] text-white md:basis-1/3 basis-1">
             <header
-              class="opacity-70 flex justify-between bg-[#2D303D] px-2 py-2"
-            >
-              <p>Friday</p>
-              <p>11 August</p>
+              class="opacity-70 flex justify-between bg-[#2D303D] px-2 py-2">
+              <p></p>
+              <p></p>
             </header>
             <div class="space-y-6 my-4 px-2 pb-14 text-center">
-              <p class="text-lg font-semibold">London</p>
-              <p class="text-5xl font-semibold">21 C</p>
-              <p class="text-[#009AD8]">Partl cloud</p>
+              <p id="city" class="text-2xl"></p>
+              <span id="temp" class="text-5xl font-semibold  inline-block">
+              </span> <span class="text-5xl font-semibold"> &#8451</span>
+              <p id="condition" class="text-[#009AD8]"></p>
             </div>
             <footer class="flex justify-between px-2 py-2">
               <div class="flex items-center gap-2">
                 <img
                   src="./images/icon-umberella@2x.png"
                   alt="icon-umberella"
-                  class="w-6 h-6"
-                /><span class="opacity-70">0</span>
+                  class="w-6 h-6" /><span id="rain" class="opacity-70"></span>
               </div>
               <div class="flex items-center gap-2">
                 <img
                   src="./images/icon-wind@2x.png"
                   alt="icon-wind"
-                  class="w-6 h-6"
-                />
-                <span class="opacity-70">22km/s</span>
+                  class="w-6 h-6" />
+                <span id="wind" class="opacity-70"> </span><span
+                  class="opacity-70">km/s</span>
               </div>
               <div class="flex items-center gap-2">
                 <img
                   src="./images/icon-compass@2x.png"
                   alt="icon-compass"
-                  class="w-6 h-6"
-                />
-                <span class="opacity-70">ssw</span>
+                  class="w-6 h-6" />
+                <span class="opacity-70">SSW</span>
               </div>
             </footer>
           </div>
           <div class="box bg-[#262936] text-white md:basis-1/3 basis-1">
             <header
-              class="opacity-70 flex justify-between bg-[#262936] px-2 py-2"
-            >
-              <p>Friday</p>
-              <p>11 August</p>
+              class="opacity-70 flex justify-between bg-[#262936] px-2 py-2">
+              <p></p>
+              <p></p>
             </header>
             <div class="space-y-6 my-4 px-2 pb-14 text-center">
-              <p class="text-lg font-semibold">London</p>
-              <p class="text-5xl font-semibold">21 C</p>
-              <p class="text-[#009AD8]">Partl cloud</p>
+              <p id="city" class="text-2xl"></p>
+              <span id="temp" class="text-5xl font-semibold  inline-block">
+              </span> <span class="text-5xl font-semibold"> &#8451</span>
+              <p id="condition" class="text-[#009AD8]"></p>
             </div>
             <footer class="flex justify-between px-2 py-2">
               <div class="flex items-center gap-2">
                 <img
                   src="./images/icon-umberella@2x.png"
                   alt="icon-umberella"
-                  class="w-6 h-6"
-                /><span class="opacity-70">0</span>
+                  class="w-6 h-6" /><span id="rain" class="opacity-70"></span>
               </div>
               <div class="flex items-center gap-2">
                 <img
                   src="./images/icon-wind@2x.png"
                   alt="icon-wind"
-                  class="w-6 h-6"
-                />
-                <span class="opacity-70">22km/s</span>
+                  class="w-6 h-6" />
+                <span id="wind" class="opacity-70"> </span><span
+                  class="opacity-70">km/s</span>
               </div>
               <div class="flex items-center gap-2">
                 <img
                   src="./images/icon-compass@2x.png"
                   alt="icon-compass"
-                  class="w-6 h-6"
-                />
-                <span class="opacity-70">ssw</span>
+                  class="w-6 h-6" />
+                <span class="opacity-70">LGT</span>
               </div>
             </footer>
           </div>
           <div class="box bg-[#3D3A4E] text-white md:basis-1/3 basis-1">
             <header
-              class="opacity-70 flex justify-between bg-[#2D303D] px-2 py-2"
-            >
-              <p>Friday</p>
-              <p>11 August</p>
+              class="opacity-70 flex justify-between bg-[#2D303D] px-2 py-2">
+              <p></p>
+              <p></p>
             </header>
             <div class="space-y-6 my-4 px-2 pb-14 text-center">
-              <p class="text-lg font-semibold">London</p>
-              <p class="text-5xl font-semibold">21 C</p>
-              <p class="text-[#009AD8]">Partl cloud</p>
+              <p id="city" class="text-2xl"></p>
+              <span id="temp" class="text-5xl font-semibold  inline-block">
+              </span> <span class="text-5xl font-semibold"> &#8451</span>
+              <p id="condition" class="text-[#009AD8]"></p>
             </div>
             <footer class="flex justify-between px-2 py-2">
               <div class="flex items-center gap-2">
                 <img
                   src="./images/icon-umberella@2x.png"
                   alt="icon-umberella"
-                  class="w-6 h-6"
-                /><span class="opacity-70">0</span>
+                  class="w-6 h-6" /><span id="rain" class="opacity-70"></span>
               </div>
               <div class="flex items-center gap-2">
                 <img
                   src="./images/icon-wind@2x.png"
                   alt="icon-wind"
-                  class="w-6 h-6"
-                />
-                <span class="opacity-70">22km/s</span>
+                  class="w-6 h-6" />
+                <span id="wind" class="opacity-70"> </span><span
+                  class="opacity-70">km/s</span>
               </div>
               <div class="flex items-center gap-2">
                 <img
                   src="./images/icon-compass@2x.png"
                   alt="icon-compass"
-                  class="w-6 h-6"
-                />
-                <span class="opacity-70">ssw</span>
+                  class="w-6 h-6" />
+                <span class="opacity-70">SSW</span>
               </div>
             </footer>
           </div>
         </div>
       </div>
       <footer
-        class="w-full h-[calc(100vh+100px)] md:h-[calc(100vh-470px)] bg-[#1E202B]"
-      ></footer>
+        class="w-full h-[calc(100vh+100px)] md:h-[calc(100vh-470px)] bg-[#1E202B]"></footer>
     </section>
     <script src="./dist/main.js"></script>
   </body>
